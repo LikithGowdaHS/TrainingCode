@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1471935705 source:d:\passtime\missingalphabet\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<locale>
+
