@@ -19,6 +19,20 @@ string getlowercase(string Source)
     return Source;
 }
 
+//checks for the presence of all the Alphabets
+int checkForAllCharacters(bool *ReferenceArray, int PositionOfArray)
+{
+
+    for(int i=PositionOfArray ; i<NUMBEROFALPHABETS ; i++)
+    {
+        if(ReferenceArray[i]==false)
+        {
+            return PositionOfArray;
+        }
+    }
+    return 0;
+}
+
 //Returns the string from the Console
 string ReadingFromConsole()
 {
@@ -71,18 +85,25 @@ string MakingTheChoice()
 }
 
 //Tracks the Alphabets that are Present in the String
-void LoggingEachAlpa(string Source, bool *ReferenceArray)
+bool LoggingEachAlpa(string Source, bool *ReferenceArray)
 {
     locale loc;
     int SourceStringLenght = Source.length();
+    int CheckisallPresent = 0;
     for(int index = 0; index < SourceStringLenght; index++)
     {
         if(isalpha(Source[index],loc))
         {
             int i =(int) Source[index] - 'a';
             ReferenceArray[i] = true;
+            CheckisallPresent = checkForAllCharacters(ReferenceArray, CheckisallPresent);
+            if( index > NUMBEROFALPHABETS && CheckisallPresent)
+            {
+                return true;
+            }
         }
     }
+    return false;
 }
 
 //Returns the Missing Alphabet from the String
@@ -96,6 +117,7 @@ char getMissingAlpha(bool *ReferenceArray)
             return MissingAlpha;
         }
     }
+    return '1';
 }
 
 int main()
@@ -110,11 +132,22 @@ int main()
 
     SourceString = getlowercase(SourceString);
 
-    LoggingEachAlpa(SourceString,ReferenceArray);
+    bool checkflag = LoggingEachAlpa(SourceString,ReferenceArray);
+    if(checkflag)
+    {
+        cout << "All the Alphabets are present" << endl;
+        return 0;
+    }
 
     char MissingAlpha = getMissingAlpha(ReferenceArray);
 
-    cout << MissingAlpha;
-
+    if(MissingAlpha == '1')
+    {
+        cout << "All the Alphabets are present" << endl;
+    }
+    else
+    {
+        cout << MissingAlpha;
+    }
     return 0;
 }
