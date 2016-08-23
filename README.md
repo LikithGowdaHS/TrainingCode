@@ -1,5 +1,8 @@
 # TrainingCode
 
+ASSIGNAMENT:
+  Print the first missing Alphabet in a given string
+  Input can be Read from Console or From a File
 Programs done during Training
 
 
