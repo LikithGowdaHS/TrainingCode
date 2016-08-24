@@ -51,55 +51,78 @@ bool IncrementTillTen(vector<int> &Source, int position)
     return true;
 }
 
+int MergeToNumber(vector<int> &Source, int NumberOfDigits)
+{
+    /*vector<int>::iterator position = Source.end();
+    cout << *position;*/
+    //int Lenght = Source.size();
+    int Multiplier = 1;
+    int MergedNumber = 1;
+    //for(position = Source.end() ; position != Source.begin() ; position--)
+    for(int i=NumberOfDigits-1; i>=0 ; i--)
+    {
+        MergedNumber = (MergedNumber*Multiplier) + Source[i];
+        cout << Source[i];
+        Multiplier = Multiplier * 10;
+    }
+    return MergedNumber;
+}
+
+
+
 int NextPalindrom(int NumberSource , int NumberOfDigits)
 {
     vector<int> DigitArray;
-    int Mid = NumberOfDigits/2;
-    while(NumberSource)
+    DigitArray.clear();
+    if(DigitArray.empty())
     {
-        DigitArray.insert(DigitArray.begin(),getEachDigit(NumberSource));
-        NumberSource = NumberSource / 10;
-    }
-
-    int indexFront = 0;
-    int indexBack = NumberOfDigits-1 ;
-
-    while( indexBack > indexFront )
-    {
-
-        if(DigitArray[indexFront] == DigitArray[indexBack])
+        vector<int>::iterator head = DigitArray.begin();
+        int Mid = NumberOfDigits/2;
+        while(NumberSource)
         {
-            indexFront++;
-            indexBack--;
-
+            DigitArray.insert(DigitArray.begin(),getEachDigit(NumberSource));
+            NumberSource = NumberSource / 10;
         }
-        else
+
+        int indexFront = 0;
+        int indexBack = NumberOfDigits-1 ;
+
+        while( indexBack > indexFront )
         {
 
-            if(DigitArray[indexFront] > DigitArray[indexBack])
+            if(DigitArray[indexFront] == DigitArray[indexBack])
             {
-                int diff = DigitArray[indexFront] - DigitArray[indexBack];
-                DigitArray[indexBack] = DigitArray[indexBack] + diff;
+                indexFront++;
+                indexBack--;
+
             }
             else
             {
-                if(DigitArray[indexBack] < 9)
+
+                if(DigitArray[indexFront] > DigitArray[indexBack])
                 {
-                    DigitArray[indexBack]++;
+                    int diff = DigitArray[indexFront] - DigitArray[indexBack];
+                    DigitArray[indexBack] = DigitArray[indexBack] + diff;
                 }
                 else
                 {
-                    DigitArray[indexBack] = 0;
-                    IncrementTillTen(DigitArray,indexBack-1);
+                    if(DigitArray[indexBack] < 9)
+                    {
+                        DigitArray[indexBack]++;
+                    }
+                    else
+                    {
+                        DigitArray[indexBack] = 0;
+                        IncrementTillTen(DigitArray,indexBack-1);
+                    }
                 }
             }
         }
+    int Number = MergeToNumber(DigitArray,NumberOfDigits);
+    //cout << Number;
+    return Number;
     }
-    for(vector<int>::iterator iterateFront = DigitArray.begin() ; iterateFront != DigitArray.end() ; iterateFront++)
-    {
-        cout << *iterateFront;
-    }
-    return 0;
+
 }
 
 int main()
@@ -109,14 +132,20 @@ int main()
     int CurrentNumber;
     cin >> CurrentNumber;
 
-    int NumberOfDigits = getNumberOfDigits(CurrentNumber);
-
     if(isPalindrome(CurrentNumber))
     {
-        CurrentNumber++;
+            CurrentNumber++;
     }
 
-    NextPalindrom(CurrentNumber,NumberOfDigits);
+    //for(int i=0 ; i<10 ; i++)
+    //{
+        int NumberOfDigits = getNumberOfDigits(CurrentNumber);
 
+        int NextPalindromeNumber = NextPalindrom(CurrentNumber,NumberOfDigits);
+        CurrentNumber = 0;
+        CurrentNumber = NextPalindromeNumber;
+        cout << CurrentNumber << "Hello"  << endl;
+        CurrentNumber++;
+    //}
     return 0;
 }

@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1472033603 source:d:\passtime\trainingcode\differentnumberbaseopertaion\main.cpp
+	<iostream>
+	"BinayAdder.h"
+	"OctaAdder.h"
+
+1472040658 source:d:\passtime\trainingcode\differentnumberbaseopertaion\src\adder.cpp
+	"Adder.h"
+	<iostream>
+
+1472041311 d:\passtime\trainingcode\differentnumberbaseopertaion\include\adder.h
+
+1472041619 d:\passtime\trainingcode\differentnumberbaseopertaion\include\binayadder.h
+	<Adder.h>
+	<string>
+
+1472041209 source:d:\passtime\trainingcode\differentnumberbaseopertaion\src\binayadder.cpp
+	"BinayAdder.h"
+	<iostream>
+	<bitset>
+	<limits>
+
+1472034919 source:d:\passtime\trainingcode\differentnumberbaseopertaion\src\octaadder.cpp
+	"OctaAdder.h"
+	<iostream>
+	<cmath>
+
+1472041828 d:\passtime\trainingcode\differentnumberbaseopertaion\include\octaadder.h
+	<Adder.h>
+
+1472034959 source:d:\passtime\trainingcode\differentnumberbaseopertaion\src\hexadder.cpp
+	"HexAdder.h"
+
+1472041547 d:\passtime\trainingcode\differentnumberbaseopertaion\include\hexadder.h
+	<Adder.h>
+
