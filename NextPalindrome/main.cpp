@@ -51,26 +51,34 @@ bool IncrementTillTen(vector<int> &Source, int position)
     return true;
 }
 
-int MergeToNumber(vector<int> &Source, int NumberOfDigits)
+int MergeToNumber(vector<int> Source, int NumberOfDigits)
 {
     /*vector<int>::iterator position = Source.end();
     cout << *position;*/
     int Lenght = NumberOfDigits;
     int Multiplier = 1;
-    
-    while(NumberOfDigits)
+
+    while(Lenght-1)
     {
         Multiplier = Multiplier * 10;
+        Lenght--;
     }
-    
-    int MergedNumber = 1;
+    //cout << Multiplier;
+    //for(vector<int>::iterator it = Source.begin() ; it != Source.end(); it++)
+          //cout << *it;
+    //int MergedNumber = 1;
     //for(position = Source.end() ; position != Source.begin() ; position--)
-    for(vector<int>::iterator it = Source.begin() ; it != Source.end() || Multiplier ; it++)
+    //for(int i=0 ; i <NumberOfDigits ;i++)
+    vector<int>::iterator it = Source.begin();
+    int MergedNumber = *it * Multiplier;
+    Multiplier = Multiplier / 10;
+    for(it = Source.begin()+1 ; it != Source.end(); it++)
     {
-        MergedNumber = (MergedNumber*Multiplier) + *it;
-        cout << *it;
+        MergedNumber = MergedNumber + (*it * Multiplier);
+        //cout  << MergedNumber << "\t";
         Multiplier = Multiplier / 10;
     }
+    //
     return MergedNumber;
 }
 
@@ -79,7 +87,7 @@ int MergeToNumber(vector<int> &Source, int NumberOfDigits)
 int NextPalindrom(int NumberSource , int NumberOfDigits)
 {
     vector<int> DigitArray;
-    DigitArray.clear();
+
     if(DigitArray.empty())
     {
         vector<int>::iterator head = DigitArray.begin();
@@ -89,9 +97,9 @@ int NextPalindrom(int NumberSource , int NumberOfDigits)
             DigitArray.insert(DigitArray.begin(),getEachDigit(NumberSource));
             NumberSource = NumberSource / 10;
         }
-        
-        for(vector<int>::iterator it = DigitArray.begin() ; it != DigitArray.end(); it++)
-          cout << *it;
+
+        //for(vector<int>::iterator it = DigitArray.begin() ; it != DigitArray.end(); it++)
+          //cout << *it;
 
         int indexFront = 0;
         int indexBack = NumberOfDigits-1 ;
@@ -127,9 +135,12 @@ int NextPalindrom(int NumberSource , int NumberOfDigits)
                 }
             }
         }
-    int Number = MergeToNumber(DigitArray,NumberOfDigits);
-    //cout << Number;
-    return Number;
+        //for(vector<int>::iterator it = DigitArray.begin() ; it != DigitArray.end(); it++)
+          //cout << *it;
+        int Number = MergeToNumber(DigitArray,NumberOfDigits);
+
+        //cout << Number <<endl;
+        return Number;
     }
 
 }
@@ -145,19 +156,19 @@ int main()
     {
             CurrentNumber++;
     }
-    
+
     int NumberOfDigits;
 
-    //for(int i=0 ; i<10 ; i++)
-    //{
+    for(int i=0 ; i<100 ; i++)
+    {
         NumberOfDigits = getNumberOfDigits(CurrentNumber);
-        cout << NumberOfDigits;
+        //cout << NumberOfDigits << endl;
 
         int NextPalindromeNumber = NextPalindrom(CurrentNumber,NumberOfDigits);
         CurrentNumber = 0;
         CurrentNumber = NextPalindromeNumber;
-        //cout << CurrentNumber << endl;
+        cout << CurrentNumber << endl;
         CurrentNumber++;
-    //}
+    }
     return 0;
 }
