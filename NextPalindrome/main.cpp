@@ -3,6 +3,7 @@
 
 using namespace std;
 
+//Checks For Palindrome
 bool isPalindrome(int Number)
 {
     int checkNumber = 0;
@@ -21,6 +22,7 @@ bool isPalindrome(int Number)
     return false;
 }
 
+//Returns the number of Digits in the Number
 int getNumberOfDigits(int NumberSource)
 {
     int CountOfDigits=0;
@@ -32,11 +34,13 @@ int getNumberOfDigits(int NumberSource)
     return CountOfDigits;
 }
 
+//Returns each Digit from the Number
 int getEachDigit(int NumberSource)
 {
     return (NumberSource % 10);
 }
 
+//Increments the Number with Modulus 10 and increments the Next digit also for Carry
 bool IncrementTillTen(vector<int> &Source, int position)
 {
     if(Source[position]==9)
@@ -51,10 +55,9 @@ bool IncrementTillTen(vector<int> &Source, int position)
     return true;
 }
 
+//Merges the Digits back to the Whole Number
 int MergeToNumber(vector<int> Source, int NumberOfDigits)
 {
-    /*vector<int>::iterator position = Source.end();
-    cout << *position;*/
     int Lenght = NumberOfDigits;
     int Multiplier = 1;
 
@@ -63,33 +66,26 @@ int MergeToNumber(vector<int> Source, int NumberOfDigits)
         Multiplier = Multiplier * 10;
         Lenght--;
     }
-    //cout << Multiplier;
-    //for(vector<int>::iterator it = Source.begin() ; it != Source.end(); it++)
-          //cout << *it;
-    //int MergedNumber = 1;
-    //for(position = Source.end() ; position != Source.begin() ; position--)
-    //for(int i=0 ; i <NumberOfDigits ;i++)
+
     vector<int>::iterator it = Source.begin();
     int MergedNumber = *it * Multiplier;
     Multiplier = Multiplier / 10;
     for(it = Source.begin()+1 ; it != Source.end(); it++)
     {
         MergedNumber = MergedNumber + (*it * Multiplier);
-        //cout  << MergedNumber << "\t";
         Multiplier = Multiplier / 10;
     }
-    //
     return MergedNumber;
 }
 
-
-
+//Returns the Next Palindrome Number
 int NextPalindrom(int NumberSource , int NumberOfDigits)
 {
     vector<int> DigitArray;
 
     if(DigitArray.empty())
     {
+        //Stores the Each digit to the Vector
         vector<int>::iterator head = DigitArray.begin();
         int Mid = NumberOfDigits/2;
         while(NumberSource)
@@ -98,12 +94,10 @@ int NextPalindrom(int NumberSource , int NumberOfDigits)
             NumberSource = NumberSource / 10;
         }
 
-        //for(vector<int>::iterator it = DigitArray.begin() ; it != DigitArray.end(); it++)
-          //cout << *it;
-
         int indexFront = 0;
         int indexBack = NumberOfDigits-1 ;
 
+        //checks extreme digits and calculate the palindrome
         while( indexBack > indexFront )
         {
 
@@ -135,11 +129,7 @@ int NextPalindrom(int NumberSource , int NumberOfDigits)
                 }
             }
         }
-        //for(vector<int>::iterator it = DigitArray.begin() ; it != DigitArray.end(); it++)
-          //cout << *it;
         int Number = MergeToNumber(DigitArray,NumberOfDigits);
-
-        //cout << Number <<endl;
         return Number;
     }
 
@@ -159,10 +149,10 @@ int main()
 
     int NumberOfDigits;
 
+    //Next 100 Palindrome
     for(int i=0 ; i<100 ; i++)
     {
         NumberOfDigits = getNumberOfDigits(CurrentNumber);
-        //cout << NumberOfDigits << endl;
 
         int NextPalindromeNumber = NextPalindrom(CurrentNumber,NumberOfDigits);
         CurrentNumber = 0;
