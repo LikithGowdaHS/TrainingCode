@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1471947805 source:d:\passtime\nextpalindrome\main.cpp
+	<iostream>
+	<vector>
+
+1472021279 source:d:\passtime\trainingcode\nextpalindrome\main.cpp
+	<iostream>
+	<vector>
+
