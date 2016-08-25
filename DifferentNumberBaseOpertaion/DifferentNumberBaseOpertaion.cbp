@@ -36,9 +36,13 @@
 		</Compiler>
 		<Unit filename="include/Adder.h" />
 		<Unit filename="include/BinayAdder.h" />
+		<Unit filename="include/HexAdder.h" />
+		<Unit filename="include/OctaAdder.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Adder.cpp" />
 		<Unit filename="src/BinayAdder.cpp" />
+		<Unit filename="src/HexAdder.cpp" />
+		<Unit filename="src/OctaAdder.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

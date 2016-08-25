@@ -1,6 +1,7 @@
 #include "OctaAdder.h"
 #include <iostream>
 #include <cmath>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -8,9 +9,25 @@ OctaAdder::OctaAdder()
 {
     OctaOperand1 = 0;
     OctaOperand2 = 0;
-
-
     //ctor
+}
+
+OctaAdder::OctaAdder(int op1, int op2)
+{
+    OctaOperand1 = op1;
+    OctaOperand2 = op2;
+
+    cout << "Enter 1--> Add the numbers \t 2--> Subtract the numbers" << endl;
+    int choice;
+    cin >> choice;
+
+    switch(choice)
+    {
+        case 1: add();
+                break;
+        case 2: sub();
+                break;
+    }
 }
 
 OctaAdder::~OctaAdder()
@@ -75,16 +92,4 @@ void OctaAdder::ReadOperands()
     cin >> oct >> OctaOperand1;
     cout << "Enter the Second Operand" << endl;
     cin >> oct >> OctaOperand2;
-
-    cout << "Enter 1--> Add the numbers \t 2--> Subtract the numbers" << endl;
-    int choice;
-    cin >> choice;
-
-    switch(choice)
-    {
-        case 1: add();
-                break;
-        case 2: sub();
-                break;
-    }
 }

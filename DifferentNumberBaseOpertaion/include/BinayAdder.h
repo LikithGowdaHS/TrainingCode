@@ -9,6 +9,7 @@ class BinayAdder : public Adder
 {
     public:
         BinayAdder();
+        BinayAdder(std::string op1, std::string op2);
         virtual ~BinayAdder();
         void add();
         std::string addtosub(int c, int Length);

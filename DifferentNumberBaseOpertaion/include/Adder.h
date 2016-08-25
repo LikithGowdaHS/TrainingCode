@@ -1,7 +1,6 @@
 #ifndef ADDER_H
 #define ADDER_H
 
-template <class T>
 class Adder
 {
     public:
@@ -12,8 +11,8 @@ class Adder
         void ReadOperands();
 
     protected:
-        T OperandOne;
-        T OperandTwo;
+        char OperandOne[100];
+        char OperandTwo[100];
 
     private:
 

@@ -10,7 +10,13 @@ BinayAdder::BinayAdder()
     BinaryOperand1 = "0";
     BinaryOperand2 = "0";
 
-    ReadOperands();
+    //ctor
+}
+
+BinayAdder::BinayAdder(string op1, string op2)
+{
+    BinaryOperand1 = op1;
+    BinaryOperand2 = op2;
 
     cout << "Enter 1--> Add the numbers \t 2--> Subtract the numbers" << endl;
     int choice;
@@ -23,8 +29,6 @@ BinayAdder::BinayAdder()
         case 2: sub();
                 break;
     }
-
-    //ctor
 }
 
 BinayAdder::~BinayAdder()

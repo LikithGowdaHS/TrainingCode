@@ -8,6 +8,7 @@ class OctaAdder : public Adder
 {
     public:
         OctaAdder();
+        OctaAdder(int op1,int op2);
         virtual ~OctaAdder();
         void add();
         void sub();
