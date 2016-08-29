@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1472445307 source:d:\passtime\trainingcode\filestructurecopying\main.cpp
+	"CopyFileStructure.h"
+	<iostream>
+	<thread>
+
+1472446676 d:\passtime\trainingcode\filestructurecopying\include\copyfilestructure.h
+	<string>
+	<windows.h>
+	<dir.h>
+	<dirent.h>
+	<vector>
+
+1472444998 source:d:\passtime\trainingcode\filestructurecopying\src\copyfilestructure.cpp
+	"CopyFileStructure.h"
+	<fstream>
+	<iostream>
+	<windows.h>
+	<cstring>
+	<algorithm>
+	<string>
+	<sstream>
+
