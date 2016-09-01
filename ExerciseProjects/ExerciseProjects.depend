@@ -1,0 +1,112 @@
+# depslib dependency file v1.0
+1472712432 source:d:\passtime\trainingcode\exerciseprojects\main.cpp
+	<iostream>
+	"Exercise0Base.h"
+	"Exercise1_MissingAlphabet.h"
+	"Exercise2_NextPalindrome.h"
+	"Exercise3_DifferentBaseNumbersOperations.h"
+	"Exercise4_CopyFileStructure.h"
+
+1472453553 d:\passtime\trainingcode\exerciseprojects\include\exercise0base.h
+
+1472454207 d:\passtime\trainingcode\exerciseprojects\include\exercise1_missingalphabet.h
+	<Exercise0Base.h>
+	<string>
+
+1472454191 source:d:\passtime\trainingcode\exerciseprojects\src\exercise0base.cpp
+	"Exercise0Base.h"
+	<iostream>
+
+1472454841 source:d:\passtime\trainingcode\exerciseprojects\src\exercise1_missingalphabet.cpp
+	"Exercise1_MissingAlphabet.h"
+	<locale>
+	<string>
+	<fstream>
+	<iostream>
+
+1472461110 source:d:\passtime\trainingcode\exerciseprojects\src\exercise2_nextpalindrome.cpp
+	"Exercise2_NextPalindrome.h"
+	<vector>
+	<iostream>
+
+1472460397 d:\passtime\trainingcode\exerciseprojects\include\exercise2_nextpalindrome.h
+	<Exercise0Base.h>
+	<vector>
+
+1472462353 source:d:\passtime\trainingcode\differentnumberbaseopertaion\src\adder.cpp
+	"../include/Adder.h"
+	<iostream>
+
+1472461728 d:\passtime\trainingcode\differentnumberbaseopertaion\include\adder.h
+
+1472462366 source:d:\passtime\trainingcode\differentnumberbaseopertaion\src\binayadder.cpp
+	"../include/BinayAdder.h"
+	<iostream>
+	<bitset>
+	<limits>
+
+1472462447 d:\passtime\trainingcode\differentnumberbaseopertaion\include\binayadder.h
+	"../include/Adder.h"
+	<string>
+
+1472462464 source:d:\passtime\trainingcode\differentnumberbaseopertaion\src\hexadder.cpp
+	"../include/HexAdder.h"
+	<iostream>
+	<cmath>
+
+1472462478 d:\passtime\trainingcode\differentnumberbaseopertaion\include\hexadder.h
+	"../include/Adder.h"
+	<string>
+	<iomanip>
+
+1472462489 source:d:\passtime\trainingcode\differentnumberbaseopertaion\src\octaadder.cpp
+	"../include/OctaAdder.h"
+	<iostream>
+	<cmath>
+	<stdlib.h>
+
+1472462506 d:\passtime\trainingcode\differentnumberbaseopertaion\include\octaadder.h
+	"../include/Adder.h"
+
+1472462673 source:d:\passtime\trainingcode\exerciseprojects\src\exercise3_differentbasenumbersoperations.cpp
+	"Exercise3_DifferentBaseNumbersOperations.h"
+	"../../DifferentNumberBaseOpertaion/include/BinayAdder.h"
+	"../../DifferentNumberBaseOpertaion/include/HexAdder.h"
+	"../../DifferentNumberBaseOpertaion/include/OctaAdder.h"
+	<iostream>
+
+1472462512 d:\passtime\trainingcode\exerciseprojects\include\exercise3_differentbasenumbersoperations.h
+	<Exercise0Base.h>
+	<string>
+	"../../DifferentNumberBaseOpertaion/include/Adder.h"
+
+1472712424 source:d:\passtime\trainingcode\filestructurecopying\src\copyfilestructure.cpp
+	"../include/CopyFileStructure.h"
+	<fstream>
+	<iostream>
+	<windows.h>
+	<cstring>
+	<algorithm>
+	<string>
+	<sstream>
+
+1472617587 d:\passtime\trainingcode\filestructurecopying\include\copyfilestructure.h
+	<string>
+	<windows.h>
+	<dir.h>
+	<dirent.h>
+	<vector>
+
+1472712368 source:d:\passtime\trainingcode\exerciseprojects\src\exercise4_copyfilestructure.cpp
+	"Exercise4_CopyFileStructure.h"
+	"../../FileStructureCopying/include/CopyFileStructure.h"
+	<iostream>
+	<thread>
+
+1472711503 d:\passtime\trainingcode\exerciseprojects\include\exercise4_copyfilestructure.h
+	<string>
+	<thread>
+	<vector>
+	<Exercise0Base.h>
+	"../../FileStructureCopying/include/CopyFileStructure.h"
+

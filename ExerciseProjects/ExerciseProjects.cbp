@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ExerciseProjects" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ExerciseProjects" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ExerciseProjects" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../DifferentNumberBaseOpertaion/include/Adder.h" />
+		<Unit filename="../DifferentNumberBaseOpertaion/include/BinayAdder.h" />
+		<Unit filename="../DifferentNumberBaseOpertaion/include/HexAdder.h" />
+		<Unit filename="../DifferentNumberBaseOpertaion/include/OctaAdder.h" />
+		<Unit filename="../DifferentNumberBaseOpertaion/src/Adder.cpp" />
+		<Unit filename="../DifferentNumberBaseOpertaion/src/BinayAdder.cpp" />
+		<Unit filename="../DifferentNumberBaseOpertaion/src/HexAdder.cpp" />
+		<Unit filename="../DifferentNumberBaseOpertaion/src/OctaAdder.cpp" />
+		<Unit filename="../FileStructureCopying/include/CopyFileStructure.h" />
+		<Unit filename="../FileStructureCopying/src/CopyFileStructure.cpp" />
+		<Unit filename="include/Exercise0Base.h" />
+		<Unit filename="include/Exercise1_MissingAlphabet.h" />
+		<Unit filename="include/Exercise2_NextPalindrome.h" />
+		<Unit filename="include/Exercise3_DifferentBaseNumbersOperations.h" />
+		<Unit filename="include/Exercise4_CopyFileStructure.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Exercise0Base.cpp" />
+		<Unit filename="src/Exercise1_MissingAlphabet.cpp" />
+		<Unit filename="src/Exercise2_NextPalindrome.cpp" />
+		<Unit filename="src/Exercise3_DifferentBaseNumbersOperations.cpp" />
+		<Unit filename="src/Exercise4_CopyFileStructure.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
